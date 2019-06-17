@@ -6,36 +6,48 @@
                 "id": "start",
                 "name": "Start",
                 "type": "circle",
+                "x": "0px",
+                "y": "0px",
                 "branches": [{"branch-id": "read-temperature"}]
             },
             "read-temperature": {
                 "id": "read-temperature",
-                "name": "React Temperature",
+                "name": "Read Temperature",
                 "type": "rhomb",
+                "x": "0px",
+                "y": "100px",
                 "branches": [{"branch-id": "temp-32"}]
             },
             "temp-32": {
                 "id": "temp-32",
                 "name" : "Temp < 32",
                 "type": "square-skew",
+                "x": "0px",
+                "y": "200px",
                 "branches": [{"branch-id": "turn-on-heat", "connection-name": "yes"}, {"branch-id": "turn-off-heat", "connection-name": "no"}]
             },
             "turn-on-heat": {
                 "id": "turn-on-heat",
                 "name" : "Turn on heat",
                 "type": "square-skew",
+                "x": "-150px",
+                "y": "200px",
                 "branches": [{"branch-id": "end"}]
             },
             "turn-off-heat": {
                 "id": "turn-off-heat",
                 "name" : "Turn off heat",
                 "type": "rectangle",
+                "x": "150px",
+                "y": "200px",
                 "branches": [{"branch-id": "end"}]
             },
             "end": {
                 "id": "end",
                 "name" : "End",
                 "type": "circle",
+                "x": "0px",
+                "y": "300px",
                 "branches": []
             }
         }
@@ -47,36 +59,48 @@
                 "id": "start",
                 "name": "Start",
                 "type": "circle",
+                "x": "0px",
+                "y": "0px",
                 "branches": [{"branch-id": "input-amount"}]
             },
             "input-amount": {
                 "id": "input-amount",
                 "name": "Input Amount",
                 "type": "rhomb",
+                "x": "0px",
+                "y": "100px",
                 "branches": [{"branch-id": "input-years"}]
             },
             "input-years": {
                 "id": "input-years",
                 "name": "Input Years",
                 "type": "rhomb",
+                "x": "0px",
+                "y": "200px",
                 "branches": [{"branch-id": "input-rate"}]
             },
             "input-rate": {
                 "id": "input-rate",
                 "name": "Input Rate",
                 "type": "rhomb",
+                "x": "0px",
+                "y": "300px",
                 "branches": [{"branch-id": "compute-interest"}]
             },
             "compute-interest": {
                 "id": "compute-interest",
                 "name": "Compute Interest",
                 "type": "rectangle",
+                "x": "0px",
+                "y": "400px",
                 "branches": [{"branch-id": "end"}]
             },
             "end": {
                 "id": "end",
                 "name" : "End",
                 "type": "circle",
+                "x": "0px",
+                "y": "500px",
                 "branches": []
             }
         }

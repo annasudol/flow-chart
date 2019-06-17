@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Chart from './components/Chart'
 import receiveData from './actions/receiveData'
-import * as data from './data/thermostat'
+import * as data from './data/data'
 import { connect } from 'react-redux';
 
 require('./scss/main.scss');
@@ -25,13 +25,13 @@ class App extends Component {
       <div className="container">
         <div className="data">
           <div className="data-form">
-            <h2>Select data</h2>
+            <h2>Select graph</h2>
             <div className="select-area">
               <select className="input-select" value={this.state.selectedGraph} onChange={(e)=>this.setState({selectedGraph: e.target.value})}>
                 {graphs && graphs.map(graph=> <option value={graph}>{graph.charAt(0).toUpperCase() + graph.slice(1)}</option>)}
               </select>
             </div>
-            <div>
+            <div className="graph">
               <pre>
                 {dataToChart && JSON.stringify(dataToChart, null, 2)}
               </pre>
