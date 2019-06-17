@@ -1,0 +1,84 @@
+ {
+   "thermostat": {
+        "name": "Thermostat",
+        "nodes": {
+            "start": {
+                "id": "start",
+                "name": "Start",
+                "type": "circle",
+                "branches": [{"branch-id": "read-temperature"}]
+            },
+            "read-temperature": {
+                "id": "read-temperature",
+                "name": "React Temperature",
+                "type": "rhomb",
+                "branches": [{"branch-id": "temp-32"}]
+            },
+            "temp-32": {
+                "id": "temp-32",
+                "name" : "Temp < 32",
+                "type": "square-skew",
+                "branches": [{"branch-id": "turn-on-heat", "connection-name": "yes"}, {"branch-id": "turn-off-heat", "connection-name": "no"}]
+            },
+            "turn-on-heat": {
+                "id": "turn-on-heat",
+                "name" : "Turn on heat",
+                "type": "square-skew",
+                "branches": [{"branch-id": "end"}]
+            },
+            "turn-off-heat": {
+                "id": "turn-off-heat",
+                "name" : "Turn off heat",
+                "type": "rectangle",
+                "branches": [{"branch-id": "end"}]
+            },
+            "end": {
+                "id": "end",
+                "name" : "End",
+                "type": "circle",
+                "branches": []
+            }
+        }
+    },
+    "interest": {
+        "name": "Interest",
+        "nodes": {
+            "start": {
+                "id": "start",
+                "name": "Start",
+                "type": "circle",
+                "branches": [{"branch-id": "input-amount"}]
+            },
+            "input-amount": {
+                "id": "input-amount",
+                "name": "Input Amount",
+                "type": "rhomb",
+                "branches": [{"branch-id": "input-years"}]
+            },
+            "input-years": {
+                "id": "input-years",
+                "name": "Input Years",
+                "type": "rhomb",
+                "branches": [{"branch-id": "input-rate"}]
+            },
+            "input-rate": {
+                "id": "input-rate",
+                "name": "Input Rate",
+                "type": "rhomb",
+                "branches": [{"branch-id": "compute-interest"}]
+            },
+            "compute-interest": {
+                "id": "compute-interest",
+                "name": "Compute Interest",
+                "type": "rectangle",
+                "branches": [{"branch-id": "end"}]
+            },
+            "end": {
+                "id": "end",
+                "name" : "End",
+                "type": "circle",
+                "branches": []
+            }
+        }
+    }
+}
