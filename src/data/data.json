@@ -8,7 +8,7 @@
                 "type": "circle",
                 "x": "0px",
                 "y": "0px",
-                "branches": [{"branch-id": "read-temperature"}]
+                "branches": [{"branchId": "read-temperature"}]
             },
             "read-temperature": {
                 "id": "read-temperature",
@@ -16,7 +16,7 @@
                 "type": "rhomb",
                 "x": "0px",
                 "y": "100px",
-                "branches": [{"branch-id": "temp-32"}]
+                "branches": [{"branchId": "temp-32"}]
             },
             "temp-32": {
                 "id": "temp-32",
@@ -24,23 +24,23 @@
                 "type": "square-skew",
                 "x": "0px",
                 "y": "200px",
-                "branches": [{"branch-id": "turn-on-heat", "connection-name": "yes"}, {"branch-id": "turn-off-heat", "connection-name": "no"}]
+                "branches": [{"branchId": "turn-on-heat", "connectionName": "yes"}, {"branchId": "turn-off-heat", "connectionName": "no"}]
             },
             "turn-on-heat": {
                 "id": "turn-on-heat",
                 "name" : "Turn on heat",
                 "type": "square-skew",
-                "x": "-150px",
+                "x": "-200px",
                 "y": "200px",
-                "branches": [{"branch-id": "end"}]
+                "branches": [{"branchId": "end"}]
             },
             "turn-off-heat": {
                 "id": "turn-off-heat",
                 "name" : "Turn off heat",
                 "type": "rectangle",
-                "x": "150px",
+                "x": "200px",
                 "y": "200px",
-                "branches": [{"branch-id": "end"}]
+                "branches": [{"branchId": "end"}]
             },
             "end": {
                 "id": "end",
@@ -61,7 +61,7 @@
                 "type": "circle",
                 "x": "0px",
                 "y": "0px",
-                "branches": [{"branch-id": "input-amount"}]
+                "branches": [{"branchId": "input-amount"}]
             },
             "input-amount": {
                 "id": "input-amount",
@@ -69,7 +69,7 @@
                 "type": "rhomb",
                 "x": "0px",
                 "y": "100px",
-                "branches": [{"branch-id": "input-years"}]
+                "branches": [{"branchId": "input-years"}]
             },
             "input-years": {
                 "id": "input-years",
@@ -77,7 +77,7 @@
                 "type": "rhomb",
                 "x": "0px",
                 "y": "200px",
-                "branches": [{"branch-id": "input-rate"}]
+                "branches": [{"branchId": "input-rate"}]
             },
             "input-rate": {
                 "id": "input-rate",
@@ -85,7 +85,7 @@
                 "type": "rhomb",
                 "x": "0px",
                 "y": "300px",
-                "branches": [{"branch-id": "compute-interest"}]
+                "branches": [{"branchId": "compute-interest"}]
             },
             "compute-interest": {
                 "id": "compute-interest",
@@ -93,7 +93,7 @@
                 "type": "rectangle",
                 "x": "0px",
                 "y": "400px",
-                "branches": [{"branch-id": "end"}]
+                "branches": [{"branchId": "end"}]
             },
             "end": {
                 "id": "end",
